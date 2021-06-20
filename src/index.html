@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&lt;/salt&gt; :: ToDo</title>
+    <link rel="stylesheet" type="text/css" href="./style/main.css" />
+    <script defer src="./js/index.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>&lt;/salt&gt; :: ToDo</title>
-  <link rel="stylesheet" type="text/css" href="./style/todo.css">
-  <script defer src="./js/todo.js"></script>
-</head>
-
-<body>
-  <!-- Add your markup here -->
-</body>
-
+  <body>
+    <header>
+      <h1>🌻To-Do List</h1>
+    </header>
+    <main>
+      <form id="form">
+        <label>Title</label>
+        <input type="text" id="input__title" required />
+        <label>Description</label>
+        <input type="text" id="input__desc"/>
+        <input type="submit" id="button-add" value="Add" />
+      </form>
+      <ul id="todo"></ul>
+    </main>
+  </body>
 </html>

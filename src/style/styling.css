@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400&display=swap");
+
+:root {
+  --clr-green: #c3dac3;
+  --clr-green-light: #d9e8d9;
+  --clr-yellow: #e09f3e;
+  --clr-yellow-light: #ebc284;
+  --clr-linen: linen;
+  --clr-linen-dark: #f9e6d4;
+}
+
+body {
+  font-family: "Roboto Mono", monospace;
+}
+
+#form,
+.todo__item {
+  border-radius: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+#form:hover,
+.todo__item:hover {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  transition: ease-in-out 0.3s all;
+}
+
+#input__title,
+#input__desc {
+  border: 2px solid var(--clr-yellow-light);
+  border-radius: 5px;
+}
+
+#input__title:hover,
+#input__desc:hover {
+  border-color: var(--clr-yellow);
+}
+
+#button-add,
+.button-remove {
+  border-radius: 5px;
+  font-family: "Roboto Mono", monospace;
+  font-size: 1rem;
+}
+
+#button-add {
+  background-color: var(--clr-yellow-light);
+  border: 2px solid var(--clr-yellow);
+}
+
+#button-add:hover {
+  cursor: pointer;
+  color: white;
+  transition: ease-in-out 0.2s all;
+  background-color: var(--clr-yellow);
+}
+
+.todo__item {
+  background-color: var(--clr-linen);
+}
+
+.todo__item:hover {
+  background-color: var(--clr-linen-dark);
+  cursor: pointer;
+}
+
+.todo__item__content .title {
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+
+.todo__item-completed {
+  background-color: var(--clr-green-light);
+}
+
+.todo__item-completed:hover {
+  background-color: var(--clr-green);
+}
+
+.todo__item-completed .todo__item__content {
+  text-decoration: line-through;
+  color: grey;
+}
+
+.button-remove {
+  border: none;
+  background-color: linen;
+}
+
+.button-remove:hover {
+  background-color: var(--clr-yellow-light);
+  color: white;
+  transition: ease 0.2s all;
+  cursor: pointer;
+}
