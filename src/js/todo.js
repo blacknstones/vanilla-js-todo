@@ -1,21 +1,20 @@
-const todoList = document.querySelector("#todo");
-const form = document.querySelector("#form");
+const todoList = document.querySelector('#todo');
+const form = document.querySelector('#form');
 
 const state = {
-  todo: JSON.parse(localStorage.getItem("tasks")) || [],
+  todo: JSON.parse(localStorage.getItem('tasks')) || [],
 };
 
-const updateLocalStorage = (updatedTasks) => {
-  localStorage.setItem("tasks", JSON.stringify(updatedTasks));
+const updateLocalStorage = (updatedTodo) => {
+  localStorage.setItem('tasks', JSON.stringify(updatedTodo));
 };
 
-const addRemoveButton = (task) =>
-  task.completed
-    ? `<button class="button-remove" onclick="removeTask(${task.id})">Remove</button>`
-    : "";
+const addRemoveButton = (task) => (task.completed
+  ? `<button class="button-remove" onclick="removeTask(${task.id})">Remove</button>`
+  : '');
 
 const taskHTML = (task) => `
-<li class="todo__item ${task.completed && "todo__item-completed"}" 
+<li class="todo__item ${task.completed && 'todo__item-completed'}" 
     onclick="toggleComplete(${task.id})">
   <div class="todo__item__content">
     <p class="title">${task.title}</p>
@@ -26,8 +25,8 @@ const taskHTML = (task) => `
 `;
 
 const renderTodo = () => {
-  const todo = state.todo;
-  todoList.innerHTML = "";
+  const { todo } = state;
+  todoList.innerHTML = '';
   todo.forEach((el) => {
     todoList.innerHTML += taskHTML(el);
   });
@@ -62,13 +61,13 @@ const removeTask = (id) => {
   renderTodo();
 };
 
-form.addEventListener("submit", (e) => {
+form.addEventListener('submit', (e) => {
   e.preventDefault();
-  const title = document.querySelector("#input__title");
-  const description = document.querySelector("#input__desc");
+  const title = document.querySelector('#input__title');
+  const description = document.querySelector('#input__desc');
   addTask(title.value, description.value);
-  title.value = "";
-  description.value = "";
+  title.value = '';
+  description.value = '';
 });
 
 renderTodo();
