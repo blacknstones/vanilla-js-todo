@@ -55,3 +55,4 @@ Since the design is up to us, do we need to make sure our CSS works in good old 
 
 Does the type of the button matter? Like, is it expected to be "submit" since it's in a form, or is "button" fine as well?
 > This test isn’t about details like that, but rather to create a well-functioning application and to show us some good, readable and consistent code. But what we can say is that it’s always a good idea to use semantic HTML.
+# vanilla-js-todo
