@@ -71,3 +71,6 @@ form.addEventListener('submit', (e) => {
 });
 
 renderTodo();
+
+window.removeTask = removeTask;
+window.toggleComplete = toggleComplete;
